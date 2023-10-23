@@ -1,0 +1,124 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+VECTORS
+No.1
+``` {r number1a}
+first_eleven <- LETTERS[1:11]
+first_eleven
+```
+
+
+``` {r number1b}
+odd_letters <- LETTERS[seq(1,25,2)]
+odd_letters
+```
+
+``` {r number1c}
+vowel<-c(letters[which(letters %in% c("a","e","i","o","u"))], LETTERS[which(LETTERS %in% c("A","E","I","O","U"))])
+vowel
+```
+
+```{r number1d}
+last5<- tail(letters, 5)
+last5
+```
+
+```{r number1e}
+between<-letters[15:24]
+between
+```
+
+No.2
+```{r number2a}
+city <- c("Tuguegarao City", "Manila", "Iloilo City", "Tacloban", "Samal Island", "Davao City")
+city
+```
+
+``` {r nunmber2b}
+temp <- c(42, 39, 34, 34, 30, 27)
+temp
+```
+
+```{r number2c}
+Df<-data.frame(city, temp)
+Df
+```
+
+```{r number2d}
+names(Df) <- c("City","Temparature")
+Df
+```
+
+```{r number2e}
+str(Df)
+```
+
+```{r number2f}
+Df[3:4,]
+```
+
+```{r number2g}
+highestTempCity <- Df$City[which.max(Df$Temparature)]
+highestTempCity
+lowestTempCity <- Df$City[which.min(Df$Temparature)]
+lowestTempCity
+```
+
+```{r matrixA}
+m1 <- matrix(c(1:8,11:14),ncol=4,nrow=3)
+m1
+```
+
+```{r matrixB}
+matrix(c(1:8,11:14),ncol=4,nrow=3) * 2
+```
+
+```{r matrixC}
+matrix(c(1:8,11:14),ncol=4,nrow=3)[2,]
+```
+
+```{r matrixD}
+matrix(c(1:8,11:14),ncol=4,nrow=3)[1:2,c(3,4)]
+```
+
+```{r matrixE}
+matrix(c(1:8,11:14),ncol=4,nrow=3)[3,c(2,3)]
+```
+
+```{r matrixF}
+matrix(c(1:8,11:14),ncol=4,nrow=3)[,4]
+```
+
+```{r matrixG}
+m2 <- matrix(c(1:8,11:14)*2,ncol=4,nrow=3)
+rownames(m2) <- c("isa","dalawa","tatlo")
+colnames(m2) <- c("uno","dos","tres","quatro")
+m2
+```
+
+```{r mastrixH}
+dim(m1) <- c(6,2)
+m1
+```
+
+No.3 
+Arrays
+```{r number3a}
+numbers <- c(1, 2, 3, 6, 7, 8, 9, 0, 3, 4, 5, 1)
+array_ThreeD <- array(numbers, dim = c(2, 4, 3))
+numbers
+array_ThreeD
+```
+
+```{r number3b}
+#the array has threee dimensions
+```
+
+```{r number3c}
+dimnames(array_ThreeD) <- list(c("a", "b"), LETTERS[1:4], c("1st-Dimensional Array", "2nd-Dimensional Array", "3rd-Dimensional Array"))
+array_ThreeD
+```
