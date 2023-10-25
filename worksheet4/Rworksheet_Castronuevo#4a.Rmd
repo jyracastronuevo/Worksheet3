@@ -1,0 +1,40 @@
+```{r 1a}
+shoe <-data.frame(shoesize <- c(6.5, 9.0, 8.5, 8.5, 10.5, 7.0, 9.5, 9.0, 13.0, 7.5, 10.5, 8.5, 12.0, 10.5), 
+                  shoeheight <- c(66.0, 68.0, 64.5, 65.0, 70.0, 64.0, 70.0, 71.0, 72.0, 64.0, 74.5, 67.0, 71.0, 71.0))
+shoe
+```
+```{r 1b}
+gender <- c("F", "F", "F", "F", "M", "F", "F", "F","M", "F", "M", "F", "M", "M")
+nike <- cbind(shoe, gender)
+nike
+```
+
+```{r 1c}
+mean(shoesize)
+mean(shoeheight)
+```
+
+```{r 1d}
+
+```
+
+```{r 2a}
+monthly <- c("March", "April", "January", "November", "January", "September", "November", "August", "January", "November", "November", "Febuary", "May", "August", "July", "December", "August", "August", "September", "November", "February", "April" )
+monthly
+factor.months<- factor(monthly)
+factor.months
+```
+
+```{r 3a}
+summary(monthly)
+summary(factor.months)
+```
+
+```{r 4}
+freq<- data.frame(direction <- c("East", "West", "NOrth"), frequency<-c(1, 4, 3))
+freq
+freq.data.factor<-factor()
+ordnew.data<- factor(freq, levels= c("East", "West", "NOrth"))
+ordnew.data
+print(ordnew.data)
+```
